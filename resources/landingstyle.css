@@ -41,7 +41,7 @@ html {
     border-radius: 50%;
     transform: translate(-50%, -50%);
     /* border: 5px solid black; */
-    transition: height 300ms ease;
+    transition: height 300ms ease, filter 300ms ease;
     overflow: hidden;
 }
 
@@ -60,7 +60,7 @@ html {
     text-align: center;
     align-content: center;
     transform: translate(-50%, -50%);
-    transition: opacity 300ms ease, font-size 300ms ease;
+    transition: opacity 300ms ease, font-size 200ms ease;
     /* border: 5px solid rgb(255, 217, 0); */
 }
 
@@ -74,14 +74,11 @@ html {
     font-style: oblique;
     font-weight: 1000;
     font-size: 1rem;
-    transition: opacity 300ms ease, font-size 300ms ease;
+    transition: opacity 300ms ease, font-size 500ms ease;
 }
 
-.mlink:hover .textring {filter: blur(5px); height: 40%;}
-.mlink:hover .shadow {
-    height: 40%;
-    filter: drop-shadow(.5rem .5rem 0 black);
-}
+.mlink:hover .textring {filter: blur(5px);}
+.mlink:hover .shadow {height: 30%; filter: drop-shadow(.5rem .5rem 0 black);}
 .mlink:hover .logotext {font-size: 0rem; opacity: 0;}
 .mlink:hover .entrytext {font-size: 2rem; opacity: 1;}
 
