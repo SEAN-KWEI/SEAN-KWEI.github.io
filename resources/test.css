@@ -3,46 +3,81 @@
     /* border: 1px solid; */
 }
 
-html {
+/* header */
+
+a {
+    text-decoration: none;
+}
+
+html, body {
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     height: 100vh;
     width: 100%;
+    margin: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+    background: white;
+    transition: filter 200ms ease;
+    align-content: center;
 }
 
-nav, div.space {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    min-width: 15%;
+header:hover {
+    filter: drop-shadow(0px 1.5px 3px rgb(128, 128, 128));
 }
 
-nav a div.nav {
-    padding: 0 .1rem;
-}
-
-div.logo {
+.navicon {
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: filter 100ms ease;
+    align-self: center;
+    border-radius: 50%;
+    z-index: 5;
+    filter: drop-shadow(3px, 3px, 0px, rgb(0, 0, 0));
+    background-color: black;
 }
 
-div.logo a {
-    width: 70px;
-    height: 70px;
-    border: red;
+.navicon input { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-div.logo:hover {
-    filter: drop-shadow(5px 5px 0 black);
+.toggle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 200ms ease;
+    border: 1px solid black;
+    transition: 200ms ease;
+    background-color: white;
+    cursor: pointer;
 }
+
+.toggle .toggleimg {
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.toggle:hover {
+    transform: translate(-3px, -3px);
+    filter: drop-shadow(3px, 3px, 0px, black);
+}
+
+.toggle:active {
+    transform: translate(0, 0);
+}
+
+input:checked + .toggle .toggleimg {
+    transform: rotate(45deg);
+}
+  

@@ -31,113 +31,143 @@ header {
 }
 
 header:hover {
-    filter: drop-shadow(0px 3px 5px rgb(128, 128, 128));
+    filter: drop-shadow(0px 1.5px 3px rgb(128, 128, 128));
 }
 
-div.navicon, div.space {
+.navicon, .space{
     display: flex;
     justify-content: center;
     align-self: center;
     border-radius: 50%;
     z-index: 5;
+    filter: drop-shadow(3px, 3px, 0px, rgb(0, 0, 0));
 }
 
-div.navicon .toggle, div.space div {
+.navicon {
+    background-color: black;
+}
+
+.navicon input { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle, .space .mimic {
+    position: relative;
     width: 35px;
     height: 35px;
+}
+
+.toggle {
     border-radius: 50%;
     transition: 200ms ease;
-}
-
-div.navicon:hover .toggle{
-    transform: translate(-2.5px, -2.5px);
-    filter: drop-shadow(5px 5px 0 black);
-}
-
-div.navicon .toggle img{
-    /* background-color: rgb(187, 51, 51); */
     border: 1px solid black;
     transition: 200ms ease;
-    border-radius: 50%;
     background-color: white;
     cursor: pointer;
+    z-index: 7;
 }
 
-div.navicon:hover .toggle img{
+.toggle .toggleimg {
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.toggle:hover {
+    transform: translate(-3px, -3px);
+    filter: drop-shadow(3px, 3px, 0px, black);
+}
+
+.toggle:active {
+    transform: translate(0, 0);
+}
+
+.navicon input:checked + .toggle .toggleimg{
     transform: rotate(45deg);
 }
 
+.navicon input:checked ~ nav {
+    opacity: 1;
+    left: 80px;
+}
+
 nav {
-    transform: translateX(-500px);
     left: 40px;
     display: flex;
     position: absolute;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
     opacity: 0;
     align-items: center;
     transition: all 200ms ease-in-out;
     z-index: 0;
-    border-radius: 2rem;
 }
 
-nav:hover {
-    transform: translateX(0px);
-    opacity: 1;
-    padding-left: 2rem;
-}
-
-div.navicon:hover~nav{
-    transform: translateX(0px);
-    opacity: 1;
-    padding-left: 2rem;
-}
-
-nav a {
-    padding: 1rem 0;
-}
-
-div.nav {
+.navicon .nav {
+    margin: 0 .25rem;
     padding: 0 1rem;
-    cursor: pointer;
     transition: font-size 150ms ease,
                 transform 150ms ease,
                 filter 150ms ease;
     border-radius: 50%;
     background: #fff;
 }
-div.nav:hover {
+
+.navicon .nav:hover {
+    cursor: pointer;
     border: 0.5px solid;
     font-size: 100%;
     transform: translate(-2.5px, -2.5px);
     filter: drop-shadow(5px 5px 0 black);
 }
 
+.navicon .nav:active {
+    filter: none;
+    transform: none;
+}
 
-div.logo {
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: filter 100ms ease, transform 100ms ease;
+    border-radius: 50%;
 }
 
-div.logo:hover {
+.logoimg {
+    border-radius: 50%;
+}
+
+.logo:hover {
     transform: translate(-2.5px, -2.5px);
     filter: drop-shadow(5px 5px 0 black);
 }
 
-div.logo a {
+.logo:active {
+    transform: none;
+    filter: none;
+}
+
+.logo a {
     width: 70px;
     height: 70px;
     border: red;
 }
 
-a:visited {color:black;}
-a:active {color: red;}
+a:visited {
+    color:black;
+}
+a:active {
+    color: red;
+}
 
 /* main */
 
-main {
+/* main {
     display: flex;
     position: relative;
     width: 100%;
@@ -146,4 +176,4 @@ main {
     transition: filter 200ms ease;
     align-content: center;
     border: 5px red;
-}
+} */
