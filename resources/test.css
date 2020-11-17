@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /* border: 1px solid; */
 }
 
 html {
@@ -7,85 +8,41 @@ html {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    width: 100%;
     height: 100vh;
+    width: 100%;
+}
+
+header {
     display: flex;
+    justify-content: space-between;
     position: relative;
+}
+
+nav, div.space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
+    min-width: 15%;
+}
+
+nav a div.nav {
+    padding: 0 .1rem;
+}
+
+div.logo {
+    display: flex;
     justify-content: center;
-    /* border: 5px solid red; */
-}
-
-.textring{z-index: 1;}
-.shadow{z-index: 2;}
-.entrytext, .logotext{z-index: 3;}
-
-.mlink:visited {color:black;}
-.mlink:active {color: red;}
-
-.mlink {
-    overflow: hidden;
-}
-
-.spin {
-    animation: rot 3s infinite ease-in-out;
-    height: 100%;
-    padding: auto; 
-    border-radius: 50%;
-}
-
-.textring {
-    position: absolute;
     align-items: center;
-    height: 30%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    /* border: 5px solid black; */
-    transition: height 300ms ease;
-    overflow: hidden;
+    transition: filter 100ms ease;
 }
 
-.shadow {
-    position: absolute;
-    align-items: center;
-    height: 20%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    /* border: 5px solid black; */
-    transition: height 300ms ease, filter 300ms ease;
+div.logo a {
+    width: 70px;
+    height: 70px;
+    border: red;
 }
 
-.logotext {
-    position: absolute;
-    text-align: center;
-    align-content: center;
-    transform: translate(-50%, -50%);
-    transition: opacity 300ms ease, font-size 300ms ease;
-    /* border: 5px solid rgb(255, 217, 0); */
-}
-
-.entrytext {
-    position: absolute;
-    text-align: center;
-    align-content: center;
-    transform: translate(-50%, -50%);
-    /* border: 5px solid rgb(255, 217, 0); */
-    opacity: 0;
-    font-style: oblique;
-    font-weight: 1000;
-    font-size: 1rem;
-    transition: opacity 300ms ease, font-size 300ms ease;
-}
-
-.mlink:hover .textring {filter: blur(5px); height: 40%;}
-.mlink:hover .shadow {
-    height: 40%;
-    filter: drop-shadow(.5rem .5rem 0 black);
-}
-.mlink:hover .logotext {font-size: 0rem; opacity: 0;}
-.mlink:hover .entrytext {font-size: 2rem; opacity: 1;}
-
-@keyframes rot {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+div.logo:hover {
+    filter: drop-shadow(5px 5px 0 black);
 }

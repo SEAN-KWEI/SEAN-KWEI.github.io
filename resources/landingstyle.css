@@ -28,7 +28,7 @@ html {
 }
 
 .spin {
-    animation: rot 3s infinite ease-in-out;
+    animation: rot 3s infinite cubic-bezier(0.35,-0.32, 0.26, 1.49);
     height: 100%;
     padding: auto; 
     border-radius: 50%;
@@ -36,7 +36,6 @@ html {
 
 .textring {
     position: absolute;
-    align-items: center;
     height: 30%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -47,7 +46,6 @@ html {
 
 .shadow {
     position: absolute;
-    align-items: center;
     height: 20%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
