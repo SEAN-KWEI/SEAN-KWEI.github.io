@@ -1,0 +1,75 @@
+/* main */
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+h1 {
+    margin: 0;
+    font-weight: 1000;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.main {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: filter 200ms ease;
+}
+
+.quicklinks {
+    display: flex;
+    font-size: 1rem;
+    transform: scaleY(0.9);
+    margin: .5rem 0;
+    padding: 0;
+    align-content: space-between;
+    align-items: center;
+}
+
+.QL{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 .25rem;
+    padding: .1rem .5rem;
+    transition: 300ms ease;
+    z-index: 5;
+}
+
+.QL:hover {
+    transform: translate(-3px, -3px);
+    filter: drop-shadow(3px 3px 0 black);
+    font-size: 2rem;
+    transition: 400ms ease;
+}
+
+.QL#a:hover {background-color: rgb(146, 193, 255);}
+.QL#f:hover {background-color: rgb(255, 94, 94);}
+.QL#g:hover {background-color: rgb(255, 175, 84);}
+
+.QL:active {
+    transform: none;
+    filter: none;
+    border: 1px solid red;
+}
+
+.QL#a:active, .QL#f:active, .QL#g:active {
+    color: red;
+    background-color: white;
+}
+
+/* .QL#a:active {background-color: rgb(255, 175, 84);}
+.QL#f:active {background-color: rgb(255, 94, 94);}
+.QL#g:active {background-color: rgb(146, 193, 255);} */
