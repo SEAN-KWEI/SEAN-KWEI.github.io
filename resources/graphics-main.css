@@ -57,13 +57,17 @@ p {
     border-radius: 50%;
     margin: 20px;
     transition: 200ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
     border: 1px solid black;
 }
 
 .thumbnail:hover {
     transform: translate(-10px, -10px);
     filter: drop-shadow(10px 10px 0 black);
-    /* border-color: black; */
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -81,3 +85,18 @@ p {
     /* border-color: green; */
 }
 
+.thumbText {
+    position: absolute;
+    align-self: center;
+    opacity: 0;
+    transition: 300ms ease-in-out; 
+    font-size: .75rem;
+    border-radius: 50%; 
+}
+
+.thumbnail:hover .thumbText {
+    opacity: 1;
+    background:rgb(255, 175, 84, .5);
+    padding: 0.05rem 1rem;
+    border: 1px solid black;
+}
