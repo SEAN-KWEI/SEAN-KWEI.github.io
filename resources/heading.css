@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 *:link {
@@ -12,11 +13,17 @@
 
 :root {
     --header-col: rgb(255, 251, 241);
+    --header-height: 100px;
 }
 
 /* header */
 a {
     text-decoration: none;
+}
+
+h6 {
+    font-weight: 100;
+    transform: scaleY(0.9);
 }
 
 html, body {
@@ -38,6 +45,8 @@ header {
     padding: 10px 20px;
     background: white;
     transition: 400ms ease;
+    height: var(--header-height);
+    z-index: 100;
 }
 
 header:hover {
@@ -106,7 +115,7 @@ header:hover .nav {
 
 .navicon input:checked ~ nav {
     opacity: 1;
-    left: 80px;
+    left: 70px;
 }
 
 nav {
@@ -120,8 +129,7 @@ nav {
     align-self: center;
     opacity: 0;
     align-items: center;
-    transition: all 200ms ease-in-out;
-    /* z-index: 5; */
+    transition: 100ms ease;
 }
 
 .navicon .nav {
@@ -148,7 +156,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: filter 100ms ease, transform 100ms ease;
+    transition: 100ms ease;
     border-radius: 50%;
 }
 
@@ -177,4 +185,19 @@ a:visited {
 }
 a:active {
     color: red;
+}
+
+/* footer */
+
+footer {
+    width: 50vw;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 2rem;
+    padding: 10px;
 }
