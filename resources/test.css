@@ -1,9 +1,7 @@
 * {
     box-sizing: border-box;
-    border: 1px solid;
+    /* border: 1px solid black; */
 }
-
-/* header */
 
 a {
     text-decoration: none;
@@ -14,70 +12,104 @@ html, body {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
+    width: 100%;
     height: 100vh;
-    width: 100%;
     margin: 0;
-}
+    padding: 0;
 
-header {
     display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    padding: 10px 20px;
-    background: white;
-    transition: filter 200ms ease;
-    align-content: center;
-}
-
-header:hover {
-    filter: drop-shadow(0px 1.5px 3px rgb(128, 128, 128));
-}
-
-.navicon {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    border-radius: 50%;
-    z-index: 5;
-    filter: drop-shadow(3px, 3px, 0px, rgb(0, 0, 0));
-    background-color: black;
-}
-
-.navicon input { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle {
+    flex-direction: column-reverse;
     position: relative;
-    width: 35px;
-    height: 35px;
+    justify-content: center;
+    align-items: center;
+
+    animation: fadeIn ease 1s;
+}
+
+canvas {
+    /* margin: 1rem; */
+    transition: 300ms;
+}
+
+.mlink {
+    /* position: absolute; */
+    /* z-index: 3; */
+    /* background: green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+    /* border: 1px solid black; */
     border-radius: 50%;
-    transition: 200ms ease;
+}
+
+canvas:hover {
+    transform: scale(2);
+    z-index: 5;
+}
+
+.etext {
+    margin-top: 25%;
+    background: white;
     border: 1px solid black;
-    transition: 200ms ease;
-    background-color: white;
-    cursor: pointer;
-}
-
-.toggle .toggleimg {
     border-radius: 50%;
-    transition: .4s;
+    padding: .25rem .5rem;
+    transition: 300ms;
+    /* cursor: pointer; */
 }
 
-.toggle:hover {
-    transform: translate(-3px, -3px);
-    filter: drop-shadow(3px, 3px, 0px, black);
+.etext:hover {
+    /* cursor: pointer; */
+    transform: translate(-10px, -10px);
+    filter: drop-shadow(10px 10px 0 black);
 }
 
-.toggle:active {
-    transform: translate(0, 0);
+.etext:active {
+    transform: none;
+    filter: none;
 }
 
-input:checked + .toggle .toggleimg {
-    transform: rotate(45deg);
+.mlink:visited {color:black;}
+.mlink:active {color: red;}
+
+/* .spin {
+    animation: rot 3s infinite cubic-bezier(0.35,-0.32, 0.26, 1.49);
+    height: 100%;
+    padding: auto; 
+    border-radius: 50%;
 }
-  
+
+.textring {
+    position: absolute;
+    height: 30%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+    transition: height 300ms ease, filter 300ms ease;
+    overflow: hidden;
+} */
+
+/* .icon {
+    position: relative;
+    height: 20%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+    transition: height 300ms ease, filter 300ms ease;
+} */
+
+/* .mlink:hover .textring {filter: blur(5px);}
+.mlink:hover .shadow {height: 30%; filter: drop-shadow(.5rem .5rem 0 black);}
+.mlink:hover .logotext {font-size: 0rem; opacity: 0;}
+.mlink:hover .entrytext {font-size: 2rem; opacity: 1;} */
+
+@keyframes rot {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

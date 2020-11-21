@@ -56,11 +56,12 @@ p {
     height: var(--thumb-size);
     border-radius: 50%;
     margin: 20px;
+    transition: 200ms ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 200ms ease;
     background: white;
+    /* border: 1px solid black; */
 }
 
 .thumbnail:hover {
@@ -80,6 +81,7 @@ p {
     border-radius: 50%;
     height: 100%;
     width: 100%;
+    background: white;
     /* border-color: green; */
 }
 
@@ -94,7 +96,7 @@ p {
 
 .thumbnail:hover .thumbText {
     opacity: 1;
-    background:   rgb(146, 193, 255, .5);
+    background: rgb(146, 193, 255, .5);
     padding: 0.05rem 1rem;
     border: 1px solid black;
 }
