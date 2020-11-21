@@ -21,10 +21,6 @@ a {
     text-decoration: none;
 }
 
-a:active html+body{
-    animation: fadeOut ease 1s;
-}
-
 h6 {
     font-weight: 100;
     transform: scaleY(0.9);
@@ -112,6 +108,7 @@ header:hover .nav {
 
 .toggle:active {
     transform: translate(0, 0);
+    transition: 100ms;
 }
 
 .navicon input:checked + .toggle .toggleimg{
@@ -155,6 +152,7 @@ nav {
 .navicon .nav:active {
     filter: none;
     transform: none;
+    transition: 100ms;
 }
 
 
@@ -178,6 +176,7 @@ nav {
 .logo:active {
     transform: none;
     filter: none;
+    transition: 100ms;
 }
 
 .logo a {
@@ -216,4 +215,31 @@ footer {
 @keyframes fadeOut {
     0% {opacity: 1;}
     100% {opacity: 0;}
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;  
+    border-radius: 10px;
+    border: 1px solid black;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar:hover {
+    background: grey;
+}
+
+::-webkit-scrollbar:active {
+    background: black;
 }
