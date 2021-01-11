@@ -195,6 +195,7 @@ a:active {
 /* footer */
 
 footer {
+    z-index: 0;
     width: 50vw;
     height: 2rem;
     display: flex;
@@ -224,8 +225,9 @@ footer {
 /* Track */
 ::-webkit-scrollbar-track {
     /* border: 1px solid black; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 5px;
+    background: black;
 }
    
 /* Handle */
@@ -237,7 +239,7 @@ footer {
   
   /* Handle on hover */
 ::-webkit-scrollbar:hover {
-    background: grey;
+    background: black;
 }
 
 ::-webkit-scrollbar:active {
