@@ -45,10 +45,10 @@ h2 {
 
 .QL{
     cursor: pointer;
-    border: 1px solid black;
-    border-radius: 50%;
+    border: 1px dashed black;
+    border-radius: 1rem;
     margin: 0 .25rem;
-    padding: .1rem .5rem;
+    padding: .25rem .5rem;
     transition: 300ms ease;
     z-index: 5;
 }
@@ -57,12 +57,18 @@ h2 {
     transform: translate(-3px, -3px);
     filter: drop-shadow(3px 3px 0 black);
     font-size: 2rem;
+    border-radius: 2rem;
     transition: 200ms ease;
+    padding: .75rem 1.5rem;
+    margin: 0rem 1rem;
+    border: 1px solid;
 }
 
-.QL#a:hover {background-color: rgb(146, 193, 255);}
-.QL#f:hover {background-color: rgb(255, 94, 94);}
-.QL#g:hover {background-color: rgb(255, 175, 84);}
+/* .QL#a:hover {background-color: rgb(146, 193, 255);} */
+
+.QL#a:hover {background-color: rgb(255, 231, 94);}
+.QL#f:hover {background-color: rgb(255, 231, 94);}
+.QL#g:hover {background-color: rgb(255, 231, 94);}
 
 .QL:active {
     transform: none;
@@ -71,8 +77,9 @@ h2 {
 }
 
 .QL#a:active, .QL#f:active, .QL#g:active {
-    color: red;
-    background-color: white;
+    /* color: red; */
+    border: 1px solid black;
+    /* background-color: white; */
 }
 
 /* .QL#a:active {background-color: rgb(255, 175, 84);}

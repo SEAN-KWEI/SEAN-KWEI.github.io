@@ -17,7 +17,8 @@ h2 {
 }
 
 p {
-    font-size: 1rem
+    font-weight: 100;
+    font-size: .75rem;
 }
 
 .main {
@@ -42,6 +43,21 @@ p {
 }
 
 .content {
+    display: flex;
+    width: 70%;
+    align-items:center;
+    justify-content: center;
+}
+
+.portrait{
+    display: flex;
     width: 50%;
-    /* margin: 20px; */
+    margin-right: 4rem;
+}
+
+.portrait img {
+    width: 100%;
+    height: auto;
+    border: 2px dashed black;
+    border-radius: 10rem;
 }

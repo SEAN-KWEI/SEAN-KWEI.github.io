@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    /* border: solid 1px black; */
 }
 
 *:link {
@@ -12,7 +13,7 @@
 }
 
 :root {
-    --header-col: rgb(255, 251, 241);
+    --header-col: white;
     --header-height: 100px;
 }
 
@@ -45,15 +46,16 @@ header {
     position: fixed;
     width: 100%;
     padding: 10px 20px;
-    background: white;
+    background: var(--header-col);
     transition: 400ms ease;
     height: var(--header-height);
     z-index: 100;
 }
 
 header:hover {
-    filter: drop-shadow(0px 1.5px 3px grey);
-    background: rgb(255, 251, 241);
+    filter: drop-shadow(0px 2px 2px rgb(214, 214, 214));
+    /* border-bottom: 1px solid black; */
+
 }
 
 header:hover .nav {
@@ -119,40 +121,50 @@ header:hover .nav {
 .navicon input:checked ~ nav {
     opacity: 1;
     left: 70px;
+    transform: none;
+    transition: 300ms ease;
 }
 
 nav {
     left: 1%;
     font-size: .75rem;
     max-width: 33%;
-    display: flex;
+    display:flex;
     position: absolute;
     flex-wrap: wrap;
+    opacity: 0;
     justify-content: space-evenly;
     align-self: center;
-    opacity: 0;
+    transform: translate(-1000px);
     align-items: center;
     transition: 300ms ease;
 }
 
+nav #curr {
+    border: 1px dashed black;
+}
+
 .navicon .nav {
-    margin: 5px 5px;
-    padding: 0 .5rem;
+    flex-shrink: 2;
+    margin: 5px;
+    padding: .25rem .5rem;
     transition: 300ms ease;
-    border-radius: 50%;
+    /* border: 1px hidden; */
+    border-radius: 1rem;
 }
 
 .navicon .nav:hover {
-    border: 0.5px solid;
+    /* border: 0.5px solid; */
+    background: rgb(255, 231, 94);
     transform: translate(-2.5px, -2.5px);
-    filter: drop-shadow(5px 5px 0 black);
+    filter: drop-shadow(.25rem .25rem 0 black);
     cursor: pointer;
 }
 
 .navicon .nav:active {
     filter: none;
     transform: none;
-    transition: 100ms;
+    transition: 75ms;
 }
 
 
@@ -189,23 +201,23 @@ a:visited {
     color:black;
 }
 a:active {
-    color: red;
+    color: black;
 }
 
 /* footer */
 
-footer {
+footer div h6{
     z-index: 0;
-    width: 50vw;
-    height: 2rem;
+    width: 70vw;
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     border: 1px solid black;
     border-radius: 25px;
-    margin: 2rem;
-    padding: 10px;
+    margin-top: 5rem;
+    margin-bottom: .5rem;
 }
 
 @keyframes fadeIn {
