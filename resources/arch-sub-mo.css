@@ -126,13 +126,25 @@ img {
     width: 20%;
 }
 
+.demo img:hover {
+    border: 1px solid;
+}
+
 /* Add a transparency effect for thumnbail images */
 .demo {
     padding: 1rem;
     width: 100%;
+    transition: 300ms ease;
 }
 
 .demo:hover {
     transform: translate(-3px, -3px);
     filter: drop-shadow(3px 3px 0 black);
+    transition: 300ms ease;
+}
+
+.demo:active {
+    transform: none;
+    filter: none;
+    transition: 150ms ease;
 }
