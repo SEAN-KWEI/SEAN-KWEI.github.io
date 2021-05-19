@@ -4,86 +4,78 @@
 <link rel='stylesheet' href='./resources/test.css'>
 <body>
 
-<h2 style="text-align:center">Slideshow Gallery</h2>
+  <h2 style="text-align:center">Slideshow Gallery</h2>
 
-<div class="container">
-  <div class="thumbs">
-    <div class="numbertext">1 / 7</div>
-    <img src="./resources/mo/1.jpg" style="width:100%">
-  </div>
-
-  <div class="thumbs">
-    <div class="numbertext">2 / 7</div>
-    <img src="./resources/mo/2.jpg" style="width:100%">
-  </div>
-
-  <div class="thumbs">
-    <div class="numbertext">3 / 7</div>
-    <img src="./resources/mo/4.jpg" style="width:100%">
-  </div>
-    
-  <div class="thumbs">
-    <div class="numbertext">4 / 7</div>
-    <img src="./resources/mo/6.jpg" style="width:100%">
-  </div>
-
-  <div class="thumbs">
-    <div class="numbertext">5 / 7</div>
-    <img src="./resources/mo/3.jpg" style="width:100%">
-  </div>
-    
-  <div class="thumbs">
-    <div class="numbertext">6 / 7</div>
-    <img src="./resources/mo/7.jpg" style="width:100%">
-  </div>
-
-  <div class="thumbs">
-    <div class="numbertext">7 / 7</div>
-    <img src="./resources/mo/4.jpg" style="width:100%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The basbaba">
+  <div class="container">
+    <div class="thumbs">
+      <div class="numbertext">1 / 7</div>
+      <img src="./resources/mo/1.jpg">
     </div>
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="asdfadfa Terre">
+
+    <div class="thumbs">
+      <div class="numbertext">2 / 7</div>
+      <img src="./resources/mo/2.jpg">
     </div>
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+
+    <div class="thumbs">
+      <div class="numbertext">3 / 7</div>
+      <img src="./resources/mo/3.jpg">
     </div>
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      
+    <div class="thumbs">
+      <div class="numbertext">4 / 7</div>
+      <img src="./resources/mo/4.jpg">
     </div>
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/3.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>    
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+
+    <div class="thumbs">
+      <div class="numbertext">5 / 7</div>
+      <img src="./resources/mo/5.jpg">
     </div>
-    <div class="column">
-        <img class="demo cursor" src="./resources/mo/3.jpg" style="width:100%" onclick="currentSlide(7)" alt="Snowy Mountains">
+      
+    <div class="thumbs">
+      <div class="numbertext">6 / 7</div>
+      <img src="./resources/mo/6.jpg">
     </div>
-</div>
+
+    <div class="thumbs">
+      <div class="numbertext">7 / 7</div>
+      <img src="./resources/mo/7.jpg">
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/1.jpg" onclick="currentSlide(1)" alt="foundation explosion">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/2.jpg" onclick="currentSlide(2)" alt="wall section">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/3.jpg" onclick="currentSlide(3)" alt="wall section explosion">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/4.jpg" onclick="currentSlide(4)" alt="steel framing">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/5.jpg" onclick="currentSlide(5)" alt="concrete waffle framing">
+      </div>    
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/6.jpg" onclick="currentSlide(6)" alt="zoning analysis 3D">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/mo/7.jpg" onclick="currentSlide(7)" alt="zoning analysis 2D">
+      </div>
+  </div>
 
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   var i;
@@ -91,18 +83,75 @@ function showSlides(n) {
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
 
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+
+  slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 </script>
+
 </body>
 </html>
+
+<!-- 
+    <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/1.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/2.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/3.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/4.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/5.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/6.jpg'>
+          </div>
+  </label>
+  <label class="cntnt">
+      <input type='checkbox'>
+          <div class="tog">
+              <img alt='thumbnails' src='./resources/mo/7.jpg'>
+          </div>
+  </label> -->
