@@ -88,23 +88,11 @@
                 <div class="row">
                   <div class="column">
                     <img class="demo cursor" src="./resources/mo/1.jpg" onclick="currentSlide(1)" alt="foundation explosion">
-                  </div>
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/2.jpg" onclick="currentSlide(2)" alt="wall section">
-                  </div>
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/3.jpg" onclick="currentSlide(3)" alt="wall section explosion">
-                  </div>
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/4.jpg" onclick="currentSlide(4)" alt="steel framing">
-                  </div>
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/5.jpg" onclick="currentSlide(5)" alt="concrete waffle framing">
-                  </div>    
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/6.jpg" onclick="currentSlide(6)" alt="zoning analysis 3D">
-                  </div>
-                  <div class="column">
                     <img class="demo cursor" src="./resources/mo/7.jpg" onclick="currentSlide(7)" alt="zoning analysis 2D">
                   </div>
                 </div>
@@ -133,7 +121,7 @@
                   }
                 
                   slides[slideIndex-1].style.display = "flex";
-                  dots[slideIndex-1].className += " active";
+                  dots[slideIndex-1].className += "active cursor";
                   captionText.innerHTML = dots[slideIndex-1].alt;
                 }
                 
