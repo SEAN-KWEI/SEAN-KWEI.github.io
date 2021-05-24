@@ -38,15 +38,25 @@ img {
     z-index: 0;
 }
 
-.title, .body {
-    display: flex;
-}
-
 .title {
+    display: flex;
+    flex-direction: column;
     margin-top: var(--header-height);
     padding: 100px;
     justify-content: center;
-    width: 100%;
+    width: 50%;
+}
+
+.description {
+    font-weight: 100;
+    font-size: .75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pageName {
+    text-align: center;
+    margin: 2rem;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -72,7 +82,8 @@ img {
 }
 
 .caption-container {
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     position: sticky;
     text-align: center;
 }
@@ -140,7 +151,7 @@ img {
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-    width: 15%;
+    width: 10%;
     transition: 300ms ease;
     margin: 1rem;
 }
